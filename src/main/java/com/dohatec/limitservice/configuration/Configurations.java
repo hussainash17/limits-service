@@ -2,12 +2,13 @@ package com.dohatec.limitservice.configuration;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
-@Component
+@Configuration
 @ConfigurationProperties("limits-service")
 @Data
-public class Configuration {
+public class Configurations {
     private int minimum;
     private int maximum;
+    private String username;
 }
